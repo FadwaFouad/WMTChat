@@ -23,10 +23,12 @@ class ListOfMessagesAdapter(val context: Context): RecyclerView.Adapter<ListOfMe
     }
 
     override fun onBindViewHolder(holder: MsgViewHolder, position: Int) {
-        holder.username.text = listOfMessages[position].username
+        val sender = listOfMessages[position].sender
+        holder.username.text = sender
         holder.message.text = listOfMessages[position].message
         holder.itemView.setOnClickListener{
             val intent= Intent(context, ChatActivity::class.java)
+            intent.putExtra("USER", sender)
             context.startActivity(intent)
         }
     }

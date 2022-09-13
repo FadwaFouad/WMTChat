@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="5dp"
+    android:orientation="vertical">
+<!--    Sender messages section-->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/sender_section"
+        app:cardCornerRadius="5dp"
+        app:cardBackgroundColor="@color/darkGreen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp">
+
+            <TextView
+                android:id="@+id/senderMessage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="sender message"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <TextView
+                android:id="@+id/sendTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="00.00"
+                app:layout_constraintTop_toBottomOf="@id/senderMessage"
+                app:layout_constraintEnd_toEndOf="parent"
+              />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+
+    <!--    Receiver messages section-->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/user_section"
+        app:cardCornerRadius="5dp"
+        app:cardBackgroundColor="@color/off_white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp">
+            <TextView
+                android:id="@+id/messageSent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="sender message"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <TextView
+                android:id="@+id/messageSentTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="00.00"
+                app:layout_constraintTop_toBottomOf="@id/messageSent"
+                app:layout_constraintStart_toStartOf="parent"
+                />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+
+</LinearLayout>
