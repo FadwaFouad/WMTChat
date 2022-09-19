@@ -5,4 +5,5 @@ data class Message(
     val time: String,
     val message: String,
     val receiver: String,
+    val avatarImage : Int,
     )

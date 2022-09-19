@@ -5,6 +5,7 @@ import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.tech4dev.wmtchat.ChatActivity
@@ -25,6 +26,7 @@ class ListOfMessagesAdapter(val context: Context): RecyclerView.Adapter<ListOfMe
     override fun onBindViewHolder(holder: MsgViewHolder, position: Int) {
         val sender = listOfMessages[position].sender
         holder.username.text = sender
+        holder.profilePic.setImageResource(listOfMessages[position].avatarImage)
         holder.message.text = listOfMessages[position].message
         holder.itemView.setOnClickListener{
             val intent= Intent(context, ChatActivity::class.java)
@@ -38,5 +40,6 @@ class ListOfMessagesAdapter(val context: Context): RecyclerView.Adapter<ListOfMe
     class MsgViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
         val username: TextView = itemView.findViewById(R.id.userName)
         val message: TextView = itemView.findViewById(R.id.status)
+        val profilePic : ImageView = itemView.findViewById(R.id.profilePic)
     }
 }
