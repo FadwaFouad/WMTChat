@@ -25,12 +25,14 @@ class ListOfMessagesAdapter(val context: Context): RecyclerView.Adapter<ListOfMe
 
     override fun onBindViewHolder(holder: MsgViewHolder, position: Int) {
         val sender = listOfMessages[position].sender
+        val avatar = listOfMessages[position].avatarImage
         holder.username.text = sender
-        holder.profilePic.setImageResource(listOfMessages[position].avatarImage)
+        holder.profilePic.setImageResource(avatar)
         holder.message.text = listOfMessages[position].message
         holder.itemView.setOnClickListener{
             val intent= Intent(context, ChatActivity::class.java)
             intent.putExtra("USER", sender)
+            intent.putExtra("AVATAR", avatar)
             context.startActivity(intent)
         }
     }

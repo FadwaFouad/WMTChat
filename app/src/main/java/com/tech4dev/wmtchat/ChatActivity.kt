@@ -32,6 +32,7 @@ class ChatActivity : AppCompatActivity() {
 
         // get list of messages
         val sendername: String = intent.getStringExtra("USER") ?: ""
+        val avatar: Int = intent.getIntExtra("AVATAR",0)
         val sampleChats= SampleChats()
         val chat: Chats? = sampleChats.getChatOf(sendername)
         val listOfMessages : MutableList<Message> = chat!!.message.toMutableList()
@@ -39,9 +40,7 @@ class ChatActivity : AppCompatActivity() {
         sendButton.setOnClickListener{
             val userInput= messageTyped.text.toString()
             val time: String= SimpleDateFormat("h:mm a").format(Date())
-            // should get the specific avatar
-            val defaultAvatar= R.drawable.avatar_man1
-            val userMessage= Message("me", time,userInput,sendername,defaultAvatar )
+            val userMessage= Message("me", time,userInput,sendername,avatar )
             listOfMessages.add(userMessage)
             setChatRecycleView(listOfMessages)
             messageTyped.setText("")
