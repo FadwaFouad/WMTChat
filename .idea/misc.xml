@@ -17,6 +17,7 @@
         <entry key="app/src/main/res/drawable/ic_baseline_photo_camera_24.xml" value="0.128" />
         <entry key="app/src/main/res/drawable/ic_baseline_send_24.xml" value="0.107" />
         <entry key="app/src/main/res/drawable/ic_baseline_tag_faces_24.xml" value="0.128" />
+        <entry key="app/src/main/res/layout/activity_camera.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_chat.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_new_broadcast.xml" value="0.178125" />

@@ -1,5 +1,6 @@
 package com.tech4dev.wmtchat
 
+import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -16,13 +17,15 @@ class MainActivity : AppCompatActivity() {
     private lateinit var toolbar: androidx.appcompat.widget.Toolbar
     private lateinit var tabLayout: TabLayout
     private lateinit var viewPager: ViewPager2
+    private lateinit var context : Context
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        context = this
+
         toolbar=findViewById(R.id.toolbar)
         setSupportActionBar(toolbar)
-
 
         initTabLayout()
     }
@@ -43,6 +46,18 @@ class MainActivity : AppCompatActivity() {
         }.attach()
 
         viewPager.currentItem = 1
+        viewPager.registerOnPageChangeCallback(
+            object : ViewPager2.OnPageChangeCallback(){
+                override fun onPageSelected(position: Int) {
+                    super.onPageSelected(position)
+                    if (position == 0) {
+                        val intent = Intent(context, CameraActivity:: class.java)
+                        startActivity(intent)
+                        viewPager.currentItem = 1
+                    }
+                }
+            }
+        )
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
