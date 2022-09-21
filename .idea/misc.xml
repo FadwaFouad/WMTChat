@@ -28,7 +28,9 @@
         <entry key="app/src/main/res/layout/fragment_status.xml" value="0.15307971014492755" />
         <entry key="app/src/main/res/layout/list_of_friends_layout.xml" value="0.1" />
         <entry key="app/src/main/res/layout/status_layout.xml" value="0.33" />
+        <entry key="app/src/main/res/menu/call_menu.xml" value="0.1" />
         <entry key="app/src/main/res/menu/main_menu.xml" value="0.1" />
+        <entry key="app/src/main/res/menu/status_menu.xml" value="0.1" />
       </map>
     </option>
   </component>
