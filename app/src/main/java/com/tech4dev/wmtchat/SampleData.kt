@@ -2,6 +2,7 @@ package com.tech4dev.wmtchat
 
 import com.tech4dev.wmtchat.model.Chats
 import com.tech4dev.wmtchat.model.Message
+import com.tech4dev.wmtchat.model.Status
 import com.tech4dev.wmtchat.model.User
 
 class SampleData {
@@ -13,6 +14,15 @@ class SampleData {
         User("Ruth Okeniyi", "Hey i am using whatsapp"),
     )
 }
+class SampleStatus{
+    val LIST_OF_STATUS: List<Status> = listOf(
+        Status("Ann B", "23 minutes ago"),
+        Status("Jonah Clement", "10 Minutes ago"),
+        Status("Eze Emmanuel", "7 hours ago"),
+        Status("John Cham", "10 hours ago")
+    )
+}
+
 
 class SampleMessages{
     val LIST_OF_MESSAGES: List<Message> = listOf(
