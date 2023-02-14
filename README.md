@@ -1,6 +1,9 @@
 # WMTChat
-Whats'up clone for Women Techsters Fellowship
+Whats'up clone, try to simulate the desgin.
 
-This application was created as part of the women techsters fellowship program. It is basically a clone of Whatsapp. Though most features are just based on simulation. also,use camerax to access the camera features.
+The app is basically a clone of Whatsapp. Though most features are just based on simulation. also,use camerax lib to access the camera features.
 
-![whats(1)](https://user-images.githubusercontent.com/24944117/203157617-4fe2f9d7-021c-4087-b80b-431c45a47b01.jpg)
+.
+
+![PicsArt_02-14-09 56 51](https://user-images.githubusercontent.com/24944117/218848504-4d5e9c7f-b87e-409f-9027-4079954b10a6.png)
+![PicsArt_02-14-09 57 58](https://user-images.githubusercontent.com/24944117/218848519-1b81bb3c-d0cb-44da-b2f5-538fc6c463ee.png)
